@@ -31,4 +31,4 @@ if __name__ == '__main__':
 else:
 	app = wsgi.get_wsgi_app()
 
-Creating a new branch is quick & simple.
+Creating a new branch is quick and simple.
