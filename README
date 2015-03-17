@@ -1,1 +1,15 @@
 python RESTful 开发框架，已实现GET, POST, PUT, DELETE请求方法，API I/O采用JSON格式。
+
+DEMO:
+
+from ijiLIB.iji import WSGIApplication, Jinja2TemplateEngine 
+import os
+import your_url_module
+
+wsgi = WSGIApplication(os.path.dirname(os.path.abspath(__file__)))
+wsgi.add_module(your_url_module)
+
+if __name__ == '__main__':
+	wsgi.run()
+else:
+	app = wsgi.get_wsgi_app()
