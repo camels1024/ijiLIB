@@ -2,7 +2,7 @@ python RESTful 开发框架，已实现GET, POST, PUT, DELETE请求方法，API 
 
 DEMO:
 
-from ijiLIB.iji import WSGIApplication, Jinja2TemplateEngine 
+from ijiLIB.iji import WSGIApplication
 import os
 import your_url_module
 
