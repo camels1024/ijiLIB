@@ -2,6 +2,23 @@ python RESTful 开发框架，已实现GET, POST, PUT, DELETE请求方法，API 
 
 DEMO:
 
+your_url_module.py:
+from ijiLIB.iji import get, post, put, delete, interceptor, notfound, seeother
+from ijiLIB.apis import api, Page, APIError, APIValueError, APIResourceNotFoundError, APIPermissionError
+
+@api
+@get('/some_url')
+def this_get_handler():
+	pass
+	return dict(some_var=some_value)
+
+@api
+@post('/some_other_url')
+def this_post_handler():
+	pass
+	return None
+
+your_server.py
 from ijiLIB.iji import WSGIApplication
 import os
 import your_url_module
