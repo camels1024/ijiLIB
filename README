@@ -1,7 +1,7 @@
 已实现GET, POST, PUT, DELETE请求方法，API I/O采用JSON格式。
 
 DEMO:
-your_url_module.py:
+your_urls_module.py:
 from ijiLIB.iji import ctx, get, post, put, delete, interceptor, notfound, seeother
 from ijiLIB.apis import api, Page, APIError, APIValueError, APIResourceNotFoundError, APIPermissionError
 
@@ -23,10 +23,10 @@ def this_post_handler():
 your_server.py:
 from ijiLIB.iji import WSGIApplication
 import os
-import your_url_module
+import your_urls_module
 
 wsgi = WSGIApplication(os.path.dirname(os.path.abspath(__file__)))
-wsgi.add_module(your_url_module)
+wsgi.add_module(your_urls_module)
 
 if __name__ == '__main__':
 	wsgi.run()
