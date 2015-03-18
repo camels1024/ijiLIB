@@ -2,7 +2,7 @@
 
 DEMO:
 your_url_module.py:
-from ijiLIB.iji import get, post, put, delete, interceptor, notfound, seeother
+from ijiLIB.iji import ctx, get, post, put, delete, interceptor, notfound, seeother
 from ijiLIB.apis import api, Page, APIError, APIValueError, APIResourceNotFoundError, APIPermissionError
 
 @api
@@ -14,6 +14,7 @@ def this_get_handler():
 @api
 @post('/some_other_url')
 def this_post_handler():
+	json_obj = ctx.request.get_json()
 	pass
 	return None
 
