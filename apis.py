@@ -2,7 +2,7 @@
 __author__ = 'Yuanzhou Qiu'
 
 import re, json, functools, logging
-from web import ctx
+from iji import ctx
 
 class APIError(StandardError):
 	def __init__(self, error, data='', message=''):
