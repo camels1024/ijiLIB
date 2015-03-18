@@ -17,6 +17,8 @@ def this_post_handler():
 	pass
 	return None
 
+...
+
 your_server.py:
 from ijiLIB.iji import WSGIApplication
 import os
